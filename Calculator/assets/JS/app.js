@@ -1,27 +1,3 @@
-// function calc() {
-//     var n1 = parseFloat(document.getElementById('n1').value);
-//     var n2 = parseFloat(document.getElementById('n2').value);
-
-//     var oper = document.getElementById('operators').value;
-//     if (oper === '+') {
-//         document.getElementById('result').value = n1 + n2;
-//     }
-
-//     if (oper === '-') {
-//         document.getElementById('result').value = n1 - n2;
-//     }
-
-//     if (oper === '/') {
-//         document.getElementById('result').value = n1 / n2;
-//     }
-
-//     if (oper === 'X') {
-//         document.getElementById('result').value = n1 * n2;
-//     }
-// }
-
-
-
 (function() {
     let operation = prompt("Which operation :\n  1. Addition\n  2. Subtraction\n  3. Multiplication\n  4. Division\n  5. Maximum\n  6. Minimum\n  7. Square"); //\n  8. Average");
 
