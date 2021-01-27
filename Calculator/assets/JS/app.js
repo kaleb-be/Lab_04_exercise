@@ -34,11 +34,6 @@
     }
 })()
 
-
-
-
-
-
 function add(array) {
     let sum = 0;
     array.forEach(function(member, ) {
