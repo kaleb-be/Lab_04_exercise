@@ -31,15 +31,21 @@ let account2 = {
 (function() {
     account1.fName = prompt("Enter your first name: ");
     account1.lName = prompt("Enter your last name: ");
-    choice = prompt("What do you wnat to do: \n   1. Check balance\n   2. Deposit\n   3. withdraw\n   4. Transfer");
-    if (choice == "1") {
-        balance();
-    } else if (choice == "2") {
-        deposit();
-    } else if (choice == "3") {
-        withdraw(0);
-    } else {
-        transfer();
+    var keepOpen = true;
+    while (keepOpen === true) {
+
+        choice = prompt("What do you wnat to do: \n   1. Check balance\n   2. Deposit\n   3. withdraw\n   4. Transfer\n   0. quit");
+        if (choice == "1") {
+            balance();
+        } else if (choice == "2") {
+            deposit();
+        } else if (choice == "3") {
+            withdraw(0);
+        } else if (choice == "4") {
+            transfer();
+        } else {
+            keepOpen = false;
+        }
     }
 })();
 
@@ -52,11 +58,16 @@ function deposit(amount) {
 
 function withdraw(amount = 0) {
     if (amount == 0) { amount = prompt("Please enter amount to be withdrawn from account: "); }
-    account1.balance -= parseFloat(amount);
+    if (amount > account1.balance) {
+        console.log("Insufficient balance")
+    } else {
 
-    account1.withdrawalAmount += parseFloat(amount);
+        account1.balance -= parseFloat(amount);
 
-    balance();
+        account1.withdrawalAmount += parseFloat(amount);
+
+        balance();
+    }
 }
 
 function balance() {
