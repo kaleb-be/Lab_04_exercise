@@ -1,7 +1,8 @@
 (function() {
-    let operation = prompt("Which operation :\n  1. Addition\n  2. Subtraction\n  3. Multiplication\n  4. Division\n  5. Maximum\n  6. Minimum\n  7. Square \n  0. quit"); //\n  8. Average");
     var keepOpen = true;
     while (keepOpen === true) {
+        let operation = prompt("Which operation :\n  1. Addition\n  2. Subtraction\n  3. Multiplication\n  4. Division\n  5. Maximum\n  6. Minimum\n  7. Square \n  0. quit"); //\n  8. Average");
+
         if (operation == "1" || operation == "3" || operation == "6" || operation == "5" || operation == "8") {
             var number = prompt("How many numbers do you have?");
             var arr = [];
